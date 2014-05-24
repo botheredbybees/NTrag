@@ -1,367 +1,161 @@
+
 <!DOCTYPE html> 
-<html> 
-	<head> 
-	<meta charset="utf-8" /> 
-	<title>iOS Inspired jQuery Mobile Theme</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 	 
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<link href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" rel="stylesheet" />
-	<link href="ios_inspired/styles.css" rel="stylesheet" />
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script>
-		// all dialog buttons should close their parent dialog
-		$(".ui-dialog button").live("click", function() {		
-			$("[data-role='dialog']").dialog("close");		
-		});
-		$(document).on("mobileinit", function(){
-		  $.mobile.defaultPageTransition = "slide";
-		});
-	</script>
-	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-	<style>
-		#footerTabs {
-			background: #FFF -webkit-radial-gradient(circle, #FFF, #dee2e4);
-		}
-		.ui-listview sup {
-			font-size: 0.6em;
-			color: #cc0000;
-		}
-	</style>
+<html>
 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>NT Restricted Antimicrobials Guidelines</title> 
+	<link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css" />
 </head> 
+
+	
 <body> 
- 
-<div data-role="page"> 
- 
-	<div data-role="header" data-position="fixed"> 
-		<h1>Page Header</h1>
-	</div><!-- /header --> 
- 
-	<div data-role="content"> 
-		<p>Welcome to the iOS-Inspired jQuery Mobile theme by <a href="http://twitter.com/taitems" target="_blank">@taitems</a>. Feel free to have a look around and report and bugs to the <a href="https://github.com/taitems/iOS-Inspired-jQuery-Mobile-Theme/issues" target="_blank">GitHub issues page</a>.</p> 
- 
-			
-		<ul data-role="listview" data-inset="true"> 
-			<li><a href="#headers">Header Bars</a></li> 
-			<li><a href="#headerButtons">Header Buttons</a></li> 
-			<li><a href="#footerTabs">Footer Tabs</a></li> 
-			<li><a href="#formElements">Form Elements</a></li> 
-			<li><a href="#listViews">List Views</a></li> 
-			<li><a href="#dialogs">Dialogs</a></li> 
-			<li><a href="#popups">Popups <sup>New!</sup></a></li> 
-		</ul> 
-					
-		<br />
-			
-		<br />
- 
-		</div><!-- /ui-body wrapper -->	
-</div><!-- /page --> 
-  
-<div data-role="page" id="formElements">
- 
-	<div data-role="header" data-position="fixed">
-		<h1>Form Elements</h1>
-		<a href="#" data-rel="back" data-theme="a">Back</a>
-	</div><!-- /header --> 
- 
-	<div data-role="content"> 
-		
-		<div data-role="fieldcontain">
-		
-			<label>Some Fields and Inputs:</label>
-			
-			<br /><br />
-	
-			<input type="range" />
-			
-			<br /><br />
-			
-			<input type="search" />
-			
-			<br /><br />
-			
-			<input type="email" />
-			
-			<br />
-		
-		</div>
-		
-		<div data-role="fieldcontain">
-			<label for="slider">Select slider:</label>
-			<select name="slider" id="slider" data-role="slider">
-				<option value="off">OFF</option>
-				<option value="on">ON</option>
-			</select> 
-		</div>
-		
-		<div data-role="fieldcontain">
-			<fieldset data-role="controlgroup" data-type="horizontal">
-				<legend>Choose a pet:</legend>
-					<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
-					<label for="radio-choice-1">Cat</label>
 
-					<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
-					<label for="radio-choice-2">Dog</label>
+<!-- Start of first page: #one -->
+<div data-role="page" id="one">
 
-					<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
-					<label for="radio-choice-3">Hamster</label>
-			</fieldset>
-		</div>
-		
-		<a disabled="disabled" data-role="button" class="ui-btn-plain">Inactive &lt;a&gt;</a>
+	<div data-role="header">
+		<h1>NT Restricted Antimicrobials Guidelines</h1>
+	</div><!-- /header -->
 
-		<a data-role="button" class="ui-btn-plain">Active &lt;a&gt;</a>
-
-		<button disabled="disabled" class="ui-btn-plain">Inactive &lt;button&gt;</button>
-
-		<button class="ui-btn-plain">Active &lt;button&gt;</button>
-
-		<p><small>Does the above look funny? Consider it a bug in jQuery mobile where the classes from the underling &lt;button&gt; are not being attached to the new DOM</small></p>
+	<div data-role="content" >	
+		<ul data-role="listview" data-filter="true" id="antimicrobials"> 
+            <li data-role="list-divider">Divider..</li>
+            <li><a href="#two">Anatomy of a page</a></li> 
+        </ul>
+	</div><!-- /content -->
 	
-	</div>
-	
-</div>
-  
-<div data-role="page" id="listViews">
- 
-	<div data-role="header" data-position="fixed">
-		<h1>List Example</h1>
-		<a href="#" data-rel="back" data-theme="a">Back</a>
-	</div><!-- /header --> 
- 
-	<div data-role="content"> 
-		
-		<ul data-role="listview"> 
-			<li data-role="list-divider">Divider</li>
-			<li><a href="#">Anatomy of a page</a></li> 
-			<li><a href="#">Page transitions</a></li> 
-			<li><a href="#">Dialogs</a></li> 
-			<li><a href="#">Navigation: Ajax, hashes &amp; history</a></li> 
-			<li><a href="#">Link format examples</a></li> 
-			<li><a href="#">Theming pages</a></li>
-			<li><a href="#">Anatomy of a page</a></li> 
-			<li><a href="#">Page transitions</a></li> 
-			<li><a href="#">Dialogs</a></li> 
-			<li><a href="#">Navigation: Ajax, hashes &amp; history</a></li> 
-			<li><a href="#">Link format examples</a></li> 
-			<li><a href="#">Theming pages</a></li>
-			<li><a href="#">Anatomy of a page</a></li> 
-			<li><a href="#">Page transitions</a></li> 
-			<li><a href="#">Dialogs</a></li> 
-			<li><a href="#">Navigation: Ajax, hashes &amp; history</a></li> 
-			<li><a href="#">Link format examples</a></li> 
-			<li><a href="#">Theming pages</a></li>
-			<li><a href="#">Anatomy of a page</a></li> 
-			<li><a href="#">Page transitions</a></li> 
-			<li><a href="#">Dialogs</a></li> 
-			<li><a href="#">Navigation: Ajax, hashes &amp; history</a></li> 
-			<li><a href="#">Link format examples</a></li> 
-			<li><a href="#">Theming pages</a></li>
-		</ul> 
-		
-	</div>
-		
-</div>
-  
-<div data-role="page" id="headers"> 
- 
-	<div data-role="header" data-position="fixed">
-		<h1>Headers</h1>
-		<a href="#" data-rel="back" data-theme="a">Back</a>
-		</a>
-	</div><!-- /header --> 
- 
-	<div data-role="content"> 
-	
-		<p>
-			The default bar is the blue, but you can also use the black by specifying <em>data-theme="b"</em>.
-		</p>
-		
-		<div data-role="header" data-position="inline">
-			<a href="#" data-rel="back" data-theme="a">Back</a>
-			<h1>Blue Bar</h1>
-			<a href="#" data-theme="a">Button</a>
-		</div>
-		
-		<br />
-		
-		<div data-role="header" data-theme="b" data-position="inline">
-			<a href="#" data-rel="back" data-theme="b">Back</a>
-			<h1>Black Bar</h1>
-			<a href="#" data-theme="b">Button</a>
-		</div>
-	
-	</div>
-		
-</div>
-  
-<div data-role="page" id="headerButtons"> 
- 
-	<div data-role="header" data-position="fixed">
-		<h1>Header Buttons</h1>
-		<a href="#" data-rel="back" data-theme="a">Back</a>
-	</div><!-- /header --> 
- 
-	<div data-role="content"> 
-	
-		<p>
-			The various styled buttons you can place in a header:
-		</p>
-		
-		<div data-role="header" data-position="inline">
-			<h1>Page Title</h1>
-			<a href="#" data-theme="a">Edit</a>
-		</div>
-		
-		<br />
-		
-		<div data-role="header" data-position="inline">
-			<h1>Page Title</h1>
-			<a href="#" data-theme="b">Black</a>
-		</div>
-		
-		<br />
-		
-		<div data-role="header" data-position="inline">
-			<h1>Page Title</h1>
-			<a href="#" data-theme="c">Delete</a>
-		</div>
-		
-		<br />
-		
-		<div data-role="header" data-position="inline">
-			<h1>Page Title</h1>
-			<a href="#" data-theme="d">Done</a>
-		</div>
-		
-		<br />
-		
-		<div data-role="header" data-position="inline">
-			<h1>Page Title</h1>
-			<a href="#" data-rel="back" data-icon="arrow-l" data-theme="a">Back</a>
-		</div>
-		
-		<br />
-		
-		<div data-role="header" data-theme="b" data-position="inline">
-			<h1>Page Title</h1>
-			<a href="#" data-rel="back" data-icon="arrow-l" data-theme="b">Back</a>
-		</div>
-	
-	</div>
-		
-</div>
-
-<div data-role="page" id="allDialogExample"> 
- 
-	<div data-role="content"> 
-		<button data-theme="e">Button Style E</button>
-		<button data-theme="d">Button Style D</button>
-		<button data-theme="c">Button Style C</button>
-		<button data-theme="b">Button Style B</button>
-		<button data-theme="a">Button Style A</button>
-	</div>
-	
-</div>
-
-<div data-role="page" id="deleteDialogExample"> 
- 
-	<div data-role="content"> 
-		<button data-theme="e">Delete Draft</button>
-		<button data-theme="a">Save Draft</button>
-		<button data-theme="b">Cancel</button>
-	</div>
-	
-</div>
-
-<div data-role="page" id="postDialogExample"> 
- 
-	<div data-role="content"> 
-		<button data-theme="a">Post to Twitter</button>
-		<button data-theme="a">Post to Facebook</button>
-		<button data-theme="a">Post to YouTube</button>
-		<button data-theme="b">Cancel</button>
-	</div>
-	
-</div>
-  
-<div data-role="page" id="dialogs">
- 
-	<div data-role="header" data-position="fixed">
-		<h1>Dialogs</h1>
-		<a href="#" data-rel="back" data-theme="a">Back</a>
-	</div><!-- /header --> 
- 
-	<div data-role="content"> 
-	
-		<a href="#allDialogExample" class="ui-btn-plain" data-role="button" data-rel="dialog" data-transition="slideup">All the options</a>
-	
-		<a href="#deleteDialogExample" class="ui-btn-plain" data-role="button" data-rel="dialog" data-transition="slideup">Delete Example</a>
-	
-		<a href="#postDialogExample" class="ui-btn-plain" data-role="button" data-rel="dialog" data-transition="slideup">Post Something</a>
-	
-	</div>
-		
-</div>
-  
-<div data-role="page" id="footerTabs" data-theme="b">
- 
-	<div data-role="header" data-position="fixed">
-		<h1>Footer Tabs</h1>
-		<a href="#" data-rel="back">Back</a>
-	</div><!-- /header --> 
- 
-	<div data-role="content"> 
-	
-		Icons by Joseph Wain / <a href="http://www.glyphish.com" target="_blank">glyphish.com</a>. Licensed under the <a href="http://creativecommons.org/licenses/by/3.0/us/" target="_blank">Creative Commons Attribution 3.0 United States License</a>.
-	
-	</div>
-	
-	<div data-role="footer" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#" id="tabA" data-icon="custom">One</a></li>
-				<li><a href="#" id="tabB" data-icon="custom" class="ui-btn-active">Two</a></li>
-				<li><a href="#" id="tabC" data-icon="custom">Three</a></li>
-			</ul>
-		</div><!-- /navbar -->
+	<div data-role="footer" data-theme="d">
+		<h4>Page Footer</h4>
 	</div><!-- /footer -->
+</div><!-- /page one -->
+
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header">
+		<h1>Two</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>Two</h2>
+		<p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>	
+		<p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>	
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to page "one"</a></p>	
 		
-</div>
-  
-<div data-role="page" id="popups" data-theme="b">
- 
-	<div data-role="header" data-position="fixed">
-		<h1>Popups</h1>
-		<a href="#" data-rel="back">Back</a>
-	</div><!-- /header --> 
- 
-	<div data-role="content"> 
+	</div><!-- /content -->
 	
-		<a href="#popupBasic" data-rel="popup" data-role="button" class="ui-btn-plain">Open Popup</a>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
 
-		<a href="#popupOverlay" data-rel="popup" data-role="button" class="ui-btn-plain">Open Popup with Overlay</a>
 
-		<a href="#popupiOS" data-rel="popup" data-role="button" class="ui-btn-plain">iOS Style Popup</a>
+<!-- Start of third page: #popup -->
+<div data-role="page" id="popup">
 
-		<div data-role="popup" data-transition="fade" id="popupBasic">
-			<p>This is a completely basic popup, no options set.<p>
-		</div>
+	<div data-role="header" data-theme="e">
+		<h1>Dialog</h1>
+	</div><!-- /header -->
 
-		<div data-role="popup" data-transition="fade" data-overlay-theme="a" id="popupOverlay">
-			<p>This is a completely basic popup, but with an overlay<p>
-		</div>
-
-		<div data-role="popup" data-transition="fade" data-theme="a" data-position-to="window" id="popupiOS">
-			<img src="ios_inspired/images/tick.png">
-			<p>Saved<p>
-		</div>
+	<div data-role="content" data-theme="d">	
+		<h2>Popup</h2>
+		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>		
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>	
+	</div><!-- /content -->
 	
-	</div>
-		
-</div>
- 
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
 
-</body> 
-</html> 
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery.mobile-1.1.1.min.js"></script>
+<script>
+var data = [["Aciclovir injection","A","",""],
+["Adefovir tablets","B","","Section 100 –Liver clinic only<br>Exception: Continuation of previously prescribed regimen in hospital"],
+["Amikacin injection","C","","Gram-negative infection resistant to gentamicin and tobramycin, MDR TB, atypical mycobacteria.  Refer to NTDTC: Gentamicin and Other Aminoglycosides Guideline for Adults and Children Twelve Years of Age and Older for dosing and monitoring information."],
+["Amphotericin Liposomal injection (Ambisome®)","B","",""],
+["Anidulafungin injection","C","","Non-formulary - order on request. May take up to 72 hours for supply - contact pharmacy for advice."],
+["Antiretrovirals","B","","Section 100 – specialist only HIV infection<br>Exception: Continuation of previously prescribed regimen in hospital"],
+["Artemether with Lumefantrine tablets (Riamet®)","B","",""],
+["Artesunate injection","C","","SAS. Complicated Pl. falciparum infection as per Malaria guidelines."],
+["Azithromycin tablets and injection","B","RDH ED: Pelvic Inflammatory Disease – Treatment <br>RDH ED: Treatment of Sexually Transmitted Diseases <br>OLE_LINK3OLE_LINK4RDH Maternity: Pelvic Inflammatory Disease","Exception: Single dose for treatment of chlamydial infections eg. urethritis, cervicitis, trachoma."],
+["Aztreonam injection","C","","Where aminoglycoside therapy is contraindicated or resistant gram negative infections."],
+["Bacitracin","B","","Alternative treatment for Clostridium difficile infection. Non-formulary - order on request. May take up to 72 hours for supply - contact pharmacy for advice."],
+["Boceprevir","B","","Section 100  - Liver clinic only<br>Exception: Continuation of previously prescribed regimen in hospital"],
+["Caspofungin injection","C","",""],
+["Cefepime","B","",""],
+["Cefotaxime","A","","Exception: Paediatrics"],
+["Ceftazidime injection","A","RDH IFD: Management of Febrile Neutropenia <br>RDH IFD: Melioidosis Guidelines for Use in the Northern Territory <br>RDH ED: Peritoneal Dialysis Patients <br>NT Renal Services: Peritoneal Dialysis: Step-By-Step Guide To The Initial Treatment Of Peritonitis (Urban)<br>NT Renal Services: Peritoneal Dialysis - The Treatment Of Adult Peritonitis",""],
+["Ceftriaxone injection","A","RDH IFD: The 2012 Revised Antibiotic Guideline for ADULT Community-Acquired Pneumonia in the Top End of the Northern Territory<br>RDH ED: Pelvic Inflammatory Disease – Treatment <br>RDH ED: Treatment of Sexually Transmitted Diseases <br>RDH Maternity: Pelvic Inflammatory Disease"," Exception:  Doses  <= 2g / day."],
+["Cidofovir","C","","Section 100 – Specialist Only. <br>Non-formulary - order on request. May take up to 72 hours for supply - contact pharmacy for advice."],
+["Ciprofloxacin injection & tablets","B","RDH IFD: Management of Febrile Neutropenia<br>Radiation Oncology Unit – Insertion of fiducial markers into the prostate (prophylaxis)","Where oral therapy is indicated for infection caused by a gram-negative organism resistant to ampicillin, amoxycillin-clavulanic acid, cephazolin, cotrimoxazole and nitrofurantoin. Where oral therapy is indicated for management of gram-negative septic arthritis, joint/bone infection, penetrating eye injury, prostatitis, typhoid fever (known to be sensitive).<br>Exception: Meningococcal prophylaxis."],
+["Clarithromycin tablets","A","","Section 100 – Mycobacterium Avium infections.<br>Exception:  Helicobacter pylori eradication."],
+["Clindamycin capsules","A","","Consider when metronidazole is ineffective or contraindicated, or for gram-positive cocci infection that cannot be safely or effectively treated with a penicillin or cephalosporin.<br>Note: Lincomycin injection has replaced Clindamycin injection on the NT formulary."],
+["Clofazamine tablets","B","","Leprosy SAS"],
+["Colistin Nebulised Solution","B","","For inhalation only in Pseudomonas Aeruginosa respiratory infections"],
+["Colistin Injection","C","","Treatment of multi-drug resistant Gram-negative bacterial infections"],
+["Dapsone tablets","B","","Leprosy pack is SAS."],
+["Daptomycin injection","C","","Non-formulary - order on request. May take up to 72 hours for supply - contact pharmacy for advice."],
+["Doxycycline injection","B","","SAS Category A."],
+["Entecavir tablets","B","","Section 100 – Liver clinic only<br>Exception: Continuation of previously prescribed regimen in hospital"],
+["Ertapenem injection","C","",""],
+["Ethambutol tablets","B","",""],
+["Famciclovir tablets","B","RDH ED: Treatment of Sexually Transmitted Diseases",""],
+["Fluconazole injection & capsules","A","RDH Medicine: Antifungal Prophylaxis In Haematology Patients","Exception: Haematology/Oncology for treatment and secondary prophylaxis of oropharyngeal candidiasis."],
+["Flucytosine injection and capsules","B","","Ordered on request. Capsules SAS."],
+["Fosfomycin Granules for Solution","B","","Treatment of multi-drug resistant Urinary Tract Infections"],
+["Fusidic acid (sodium fusidate) tablets","B","","For treatment of proven staphylococcal infection (MRSA) in combination with another appropriate antibiotic."],
+["Ganciclovir","C","","Section 100 – Specialist Only.  Reconstituted interstate - ordered on request. May take up to 72 hours for supply. Contact pharmacy for advice."],
+["Gentamicin","A","","Refer to NTDTC: Gentamicin & Other Aminoglycosides Guideline for Adults & Children Twelve Years of Age and Older for dosing and monitoring guidelines."],
+["Interferon alpha injection","C","","Section 100 – specialist only"],
+["Itraconazole capsules & oral solution","B","",""],
+["Ivermectin tablets","B","","All use of ivermectin requires IFD approval.  Refer to the following guidelines for information: <br>RDH IFD: Medical - Ivermectin (Crusted Scabies) Protocol <br>RDH IFD: Medical - Prevention of Opportunistic Infections in Immunosuppressed Patients in the Top End"],
+["Lamivudine tablets","B","","Section 100 – IFD or liver clinic only<br>Exception: Continuation of previously prescribed regimen in hospital"],
+["Linezolid injection, tablets & suspension","C","","Tablets & suspension ordered on request. May take up to 72 hours for supply - contact pharmacy for advice."],
+["Lincomycin injection","B","RDH Maternity: Preterm Prelabour Rupture of Membranes.<br>GDH Maternity: PROM and GBS management.","Lincomycin injection has replaced Clindamycin injection on the NT formulary.  Refer to NT Pharmacy: Lincomycin Dosing and Administration for dosing advice."],
+["Lopinavir & Ritonavir (Kaletra®)","B","RDH Infection Control: Occupational Exposure Management",""],
+["Meropenem injection","B","RDH IFD: Management of Febrile Neutropenia <br>RDH IFD: Initial Management of Severe Sepsis In Adults",""],
+["Moxifloxacin tablets","B","",""],
+["Mupirocin ointment (nasal & topical)","B","NT Renal Services: Peritoneal Dialysis - Treatment of exit site infection<br>NT Renal Services: Peritoneal Dialysis - Exit site care<br>RDH Orthopaedics / Medicine / Operating Theatre :Post Operative Infection Reduction Strategy for Patients Undergoing Elective Insertion of Prosthetic Joint Replacement","Exception: Decolonisation prior to cardiac surgery.<br>"],
+["Norfloxacin tablets","A","","Consider for treatment of complicated UTI with proven resistant organism."],
+["Oseltamivir (and Zanamivir)","A","RDH: Guideline for Influenza Management during Influenza Season","Zanamivir non-formulary."],
+["Paromomycin","B","","SAS"],
+["Peginterferon alfa-2a","B","","Section 100 –Liver clinic only<br>Exception: Continuation of previously prescribed regimen in hospital"],
+["Peginterferon alfa-2b","B","","Section 100 –Liver clinic only<br>Exception: Continuation of previously prescribed regimen in hospital"],
+["Pentamidine injection","B","","Treatment or prophylaxis of Pneumocystis carinii infection. Ordered on request."],
+["Piperacillin & Tazobactam (Tazocin®)","A","RDH IFD: Management of Febrile Neutropenia <br>RDH IFD: Initial Management of Severe Sepsis In Adults","Exception: Diabetic foot infections for up to 14 days"],
+["Posaconazole suspension","C","RDH Medicine: Antifungal Prophylaxis In Haematology Patients",""],
+["Praziquantel","B","",""],
+["Primaquine tablets","B","",""],
+["Pristinamycin capsules","B","","SAS"],
+["Ribavirin tablets","B","","Section 100 –Liver clinic only<br>Exception: Continuation of previously prescribed regimen in hospital"],
+["Rifabutin capsules","B","","For use in combination with other antimicrobials for treatment of infection by susceptible organism.<br>Section 100 – specialist only."],
+["Rifampicin capsules, syrup or injection","B","","Must be used in combination with other antimicrobials for treatment of infection by Tuberculosis, MRSA, Staphylococcus Aureus associated with prosthetic material.."],
+["Streptomycin injection","B","","SAS Category A."],
+["Telaprevir tablets","B","","Section 100  - Liver clinic only<br>Exception: Continuation of previously prescribed regimen in hospital"],
+["Teicoplanin injection","B","","For patients intolerant to vancomycin."],
+["Tenofovir tablets","B","","Section 100 – IFD or liver clinic only<br>Exception: Continuation of previously prescribed regimen in hospital"],
+["Tenofovir & Emtricitabine (Truvada®)","B","RDH Infection Control: Occupational Exposure Management",""],
+["Terbinafine tablets","B","","For infection unresponsive to conventional therapy. Fungal elements confirmed by microscopy ± culture."],
+["Tigecycline injection","C","","Non-formulary - order on request. May take up to 72 hours for supply - contact pharmacy for advice."],
+["Tobramycin injection and inhaled","B","","Restricted to infections due to gentamicin resistant gram negative bacilli and chest infection in cystic fibrosis."],
+["Valaciclovir tablets","B","RDH ED: Treatment of Sexually Transmitted Diseases","Exception: Eye clinic for herpetic eye infections<br>Exception: Prophylaxis with highly immunosuppressive chemotherapy."],
+["Valganciclovir tablets","B","","Section 100 – Specialist only<br>Exception: Prevention of CMV disease post transplant."],
+["Vancomycin, injection","A","RDH IFD: Management of Febrile Neutropenia <br>RDH IFD: Initial Management of Severe Sepsis In Adults<br>RDH IFD: Management Of Staphylococcus Aureus Bacteraemia In Haemodialysis Patients<br>RDH IFD: Management Of Staphylococcus aureus Bacteraemia","Stat doses of vancomycin are using during peritoneal dialysis catheter insertion (refer to renal unit protocols). <br><br>Refer to NTDTC: Vancomycin Guideline for Adults and Children for dosing and monitoring guidelines."],
+["Vancomycin, oral","B","","Alternative treatment of Clostridium difficile infection. Non-formulary - order on request. May take up to 72 hours for supply - contact pharmacy for advice."],
+["Voriconazole injection, tablets and suspension.","C","","Suspension ordered on request - may take several days for supply. Contact pharmacy for advice."]];
+$( document ).ready(function() {
+	var list='';
+    for(var i = 0; i<data.length; ++i) {
+    	list += '<li><a href="#two">'+data[i][0]+' <span class="'+data[i][1]+'">'+data[i][1]+'</span>'+'</a></li>';
+    }
+    $('#antimicrobials').html(list).listview("refresh");
+});
+</script>
+
+</body>
+</html>

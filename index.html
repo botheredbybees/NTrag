@@ -5,22 +5,22 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>NT Restricted Antimicrobials Guidelines</title> 
-	<link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css" />
+	<title>NT Restricted Antimicrobials Guideline</title> 
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
 </head> 
 
 	
 <body> 
 
-<!-- Start of first page: #one -->
-<div data-role="page" id="one">
+<!-- Start of first page: #home -->
+<div data-role="page" id="home">
 
 	<div data-role="header">
-		<h1>NT Restricted Antimicrobials Guidelines</h1>
+		<h1>NT Restricted Antimicrobials Guideline</h1>
 	</div><!-- /header -->
 
 	<div data-role="content" >	
-		<ul data-role="listview" data-filter="true" id="antimicrobials"> 
+		<ul data-role="listview" data-filter="true" data-autodividers="true" id="antimicrobials"> 
             <li data-role="list-divider">Divider..</li>
             <li><a href="#two">Anatomy of a page</a></li> 
         </ul>
@@ -32,48 +32,62 @@
 </div><!-- /page one -->
 
 
-<!-- Start of second page: #two -->
-<div data-role="page" id="two" data-theme="a">
+<!-- Start of details page: #details -->
+<div data-role="page" id="details" data-theme="a">
 
 	<div data-role="header">
-		<h1>Two</h1>
+		<h1>NT Restricted Antimicrobials Guideline</h1>
 	</div><!-- /header -->
 
 	<div data-role="content" data-theme="a">	
-		<h2>Two</h2>
-		<p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>	
-		<p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>	
-		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to page "one"</a></p>	
-		
+		<h2 id="dHeader">Drug</h2>
+		<h3>Level of restriction</h3>
+		<p id="dLevel"></p>		
+		<span id="dProtocols"></span>
+		<span id="dComments"></span>
+
+		<p><a href="#home" data-direction="reverse" data-role="button" data-theme="b">Home</a></p>
 	</div><!-- /content -->
 	
 	<div data-role="footer">
 		<h4>Page Footer</h4>
 	</div><!-- /footer -->
-</div><!-- /page two -->
+</div><!-- /details page -->
 
-
-<!-- Start of third page: #popup -->
-<div data-role="page" id="popup">
-
-	<div data-role="header" data-theme="e">
-		<h1>Dialog</h1>
-	</div><!-- /header -->
-
-	<div data-role="content" data-theme="d">	
-		<h2>Popup</h2>
-		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>		
-		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>	
-	</div><!-- /content -->
-	
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page popup -->
-
-<script src="js/jquery-1.7.1.min.js"></script>
-<script src="js/jquery.mobile-1.1.1.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.2.min.js"></script>
 <script>
+$( document ).ready(function() {
+	var list='';
+    for(var i = 0; i<data.length; ++i) {
+    	list += '<li><a href="#details" class="amItem" id="'+i+'">'+data[i][0]+' <span class="'+data[i][1]+'">'+data[i][1]+'</span>'+'</a></li>';
+    }
+    $('#antimicrobials').html(list).listview("refresh");
+    $('body').on('tap', 'a.amItem', function() {
+	    console.log( 'tapped '+$(this).attr('id') );
+	    $('#dHeader').html(data[$(this).attr('id')][0]);
+	    
+	    switch (data[$(this).attr('id')][1]) {
+	    	case 'A':
+	    		$('#dLevel').html('<span class="A">A</span> Approval required from IFD/microbiology registrar or consultant <strong>within 48 hours</strong> of initiation.');
+	    		break;
+	    	case 'B':
+	    		$('#dLevel').html('<span class="B">B</span> <strong>Prior approval</strong> from IFD/micro registrar or consultant required.');
+	    		break;
+	    	case 'C':
+	    		$('#dLevel').html('<span class="C">C</span> <strong>Prior approval</strong> from <strong>IFD consultant</strong> required.');
+	    		break;
+	    }
+
+	    if(data[$(this).attr('id')][2].length) {
+	    	$('#dProtocols').html('<h3>Approved Protocols (Approval not required)</h3><p>'+data[$(this).attr('id')][2]+'<p>');
+	    }
+
+	    if(data[$(this).attr('id')][3].length) {
+	    	$('#dComments').html('<h3>Comments</h3><p>'+data[$(this).attr('id')][3]+'<p>');
+	    }
+	});
+});
 var data = [["Aciclovir injection","A","",""],
 ["Adefovir tablets","B","","Section 100 –Liver clinic only<br>Exception: Continuation of previously prescribed regimen in hospital"],
 ["Amikacin injection","C","","Gram-negative infection resistant to gentamicin and tobramycin, MDR TB, atypical mycobacteria.  Refer to NTDTC: Gentamicin and Other Aminoglycosides Guideline for Adults and Children Twelve Years of Age and Older for dosing and monitoring information."],
@@ -148,13 +162,6 @@ var data = [["Aciclovir injection","A","",""],
 ["Vancomycin, injection","A","RDH IFD: Management of Febrile Neutropenia <br>RDH IFD: Initial Management of Severe Sepsis In Adults<br>RDH IFD: Management Of Staphylococcus Aureus Bacteraemia In Haemodialysis Patients<br>RDH IFD: Management Of Staphylococcus aureus Bacteraemia","Stat doses of vancomycin are using during peritoneal dialysis catheter insertion (refer to renal unit protocols). <br><br>Refer to NTDTC: Vancomycin Guideline for Adults and Children for dosing and monitoring guidelines."],
 ["Vancomycin, oral","B","","Alternative treatment of Clostridium difficile infection. Non-formulary - order on request. May take up to 72 hours for supply - contact pharmacy for advice."],
 ["Voriconazole injection, tablets and suspension.","C","","Suspension ordered on request - may take several days for supply. Contact pharmacy for advice."]];
-$( document ).ready(function() {
-	var list='';
-    for(var i = 0; i<data.length; ++i) {
-    	list += '<li><a href="#two">'+data[i][0]+' <span class="'+data[i][1]+'">'+data[i][1]+'</span>'+'</a></li>';
-    }
-    $('#antimicrobials').html(list).listview("refresh");
-});
 </script>
 
 </body>

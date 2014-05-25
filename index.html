@@ -1,6 +1,6 @@
 
 <!DOCTYPE html> 
-<html>
+<html manifest="cache.manifest">
 
 <head>
 	<meta charset="utf-8">
@@ -28,6 +28,15 @@
 	}
 	h1 {
 		color: #0086B9;
+		text-align: left !important;
+		margin: 0px !important;
+	}
+	.frontpage {
+		background-color: #0086b9 !important;
+	}
+	.ui-bar-inherit h1 {
+		color: white;
+		text-shadow: none;
 	}
 	</style>
 </head> 
@@ -38,8 +47,8 @@
 <!-- Start of first page: #home -->
 <div data-role="page" id="home">
 
-	<div data-role="header">
-		<h1><img src="img/ntrag.png" alt="NT Restricted Antimicrobials Guideline" width="16px" height="16px">&nbsp;&nbsp;&nbsp;NT Restricted Antimicrobials Guideline</h1>
+	<div data-role="header" class="frontpage">
+		<h1>&nbsp;<img src="img/nt-flower.png" alt="NT Restricted Antimicrobials Guideline" width="16px" height="16px">&nbsp;&nbsp;NT Restricted Antimicrobials Guideline</h1>
 	</div><!-- /header -->
 
 	<div data-role="content" >	
@@ -59,7 +68,7 @@
 <div data-role="page" id="details" data-theme="a">
 
 	<div data-role="header">
-		<h1><img src="img/ntrag.png" alt="NT Restricted Antimicrobials Guideline" width="16px" height="16px">&nbsp;&nbsp;&nbsp;NT Restricted Antimicrobials Guideline</h1>
+		<h1>&nbsp;&nbsp;<img src="img/ntrag.png" alt="NT Restricted Antimicrobials Guideline" width="16px" height="16px">&nbsp;&nbsp;&nbsp;NT Restricted Antimicrobials Guideline</h1>
 	</div><!-- /header -->
 
 	<div data-role="content" data-theme="a">	
@@ -85,7 +94,7 @@ $( document ).ready(function() {
     }
     $('#antimicrobials').html(list).listview("refresh");
     $('body').on('tap', 'a.amItem', function() {
-	    console.log( 'tapped '+$(this).attr('id') );
+	    //console.log( 'tapped '+$(this).attr('id') );
 	    $('#dHeader').html(data[$(this).attr('id')][0]);
 	    
 	    switch (data[$(this).attr('id')][1]) {

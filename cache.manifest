@@ -1,16 +1,14 @@
 CACHE MANIFEST
 
-#rev1
+# 2014-05-26 rev 3
 
-NETWORK:
-*
 CACHE:
-index.html
-css/jquery.mobile-1.4.2.min.css
-img/ntrag.png
-img/ntrag-white.png
-img/nt-flower.png
-js/jquery-1.11.1.min.js
-js/jquery.mobile-1.4.2.min.js
-css/images/icons-18-white.png
-css/images/ajax-loader.png
+http://learnonline.cc/NTrag/index.html
+http://learnonline.cc/NTrag/css/jquery.mobile-1.4.2.min.css
+http://learnonline.cc/NTrag/img/ntrag.png
+http://learnonline.cc/NTrag/img/ntrag-white.png
+http://learnonline.cc/NTrag/img/nt-flower.png
+http://learnonline.cc/NTrag/js/jquery-1.11.1.min.js
+http://learnonline.cc/NTrag/js/jquery.mobile-1.4.2.min.js
+http://learnonline.cc/NTrag/css/images/icons-18-white.png
+http://learnonline.cc/NTrag/css/images/ajax-loader.png

@@ -111,10 +111,14 @@ $( document ).ready(function() {
 
 	    if(data[$(this).attr('id')][2].length) {
 	    	$('#dProtocols').html('<h3>Approved Protocols (Approval not required)</h3><p>'+data[$(this).attr('id')][2]+'<p>');
+	    } else {
+	    	$('#dProtocols').html('');
 	    }
 
 	    if(data[$(this).attr('id')][3].length) {
 	    	$('#dComments').html('<h3>Comments</h3><p>'+data[$(this).attr('id')][3]+'<p>');
+	    } else {
+	    	$('#dComments').html('');
 	    }
 	});
 });

@@ -1,0 +1,16 @@
+Some notes on data conversion
+
+I messed around a bit with the original .docx file to get it into the final JavaScript array used by the app.
+
+Although I didn't take notes at the time, here's my best recollection of the process:
+
+Opened the doc in Word for Windows, saved as an html file
+Converted the <= windows special character to a regular <=
+Maybe converted CR LF to <br> (can't be sure about this, memory is hazy)
+Selected the table and copied it to the clipboard
+Started Open Office and pasted into a new spreadsheet
+Removed all HTML formatting
+Exported as csv with the 'surround all fields with quotes' setting on
+Opened the csv file in a text editor and did some search and replacing to make each line into an array 
+Wrapped the lines in another array
+Done

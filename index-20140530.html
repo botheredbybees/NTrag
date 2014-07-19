@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>NT Antimicrobials Guideline</title>
+	<title>NT Restricted Antimicrobials Guideline</title>
 	<link rel="shortcut icon" type="image/ico" href="favicon.ico" /> 
 	<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
@@ -40,9 +40,6 @@
 		color: white;
 		text-shadow: none;
 	}
-	body {
-		text-align: center;
-		}
 	</style>
 </head> 
 
@@ -53,13 +50,7 @@
 <div data-role="page" id="home">
 
 	<div data-role="header" class="frontpage">
-		<h1>&nbsp;<img src="img/nt-flower.png" alt="NT Antimicrobials Guideline" width="16px" height="16px">&nbsp;NT Antimicrobials Guideline</h1>
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#home" class="ui-btn-active">Restricted Antimicrobials</a></li>
-				<li><a href="#oralhome">Oral Equivalents</a></li>
-			</ul>
-		</div><!-- /navbar -->
+		<h1>&nbsp;<img src="img/nt-flower.png" alt="NT Restricted Antimicrobials Guideline" width="16px" height="16px">&nbsp;NT Restricted Antimicrobials Guideline</h1>
 	</div><!-- /header -->
 
 	<div data-role="content" >	
@@ -72,20 +63,14 @@
 	<div data-role="footer" data-theme="d">
 
 	</div><!-- /footer -->
-</div><!-- /home -->
+</div><!-- /page one -->
 
 
 <!-- Start of details page: #details -->
 <div data-role="page" id="details" data-theme="a">
 
 	<div data-role="header" class="frontpage">
-		<h1><a href="#home"><span class="ui-icon-arrow-l ui-btn-icon-left " style="position:relative;" /></a><img src="img/nt-flower.png" alt="NT Antimicrobials Guideline" width="16px" height="16px">&nbsp;NT Antimicrobials Guideline</h1>
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#home" >Restricted Antimicrobials</a></li>
-				<li><a href="#oralhome">Oral Equivalents</a></li>
-			</ul>
-		</div><!-- /navbar -->
+		<h1><a href="#home"><span class="ui-icon-arrow-l ui-btn-icon-left " style="position:relative;" /></a><img src="img/nt-flower.png" alt="NT Restricted Antimicrobials Guideline" width="16px" height="16px">&nbsp;NT Restricted Antimicrobials Guideline</h1>
 	</div><!-- /header -->
 
 	<div data-role="content" data-theme="a">	
@@ -97,89 +82,19 @@
 	</div><!-- /content -->
 	
 	<div data-role="footer">
-		<h4><a href="#home" data-direction="reverse" data-role="button" data-theme="b"><img src="img/ntrag-white.png" alt="NT Antimicrobials Guideline" width="16px" height="16px">&nbsp;Home</a></h4>
+		<h4><a href="#home" data-direction="reverse" data-role="button" data-theme="b"><img src="img/ntrag-white.png" alt="NT Restricted Antimicrobials Guideline" width="16px" height="16px">&nbsp;Home</a></h4>
 	</div><!-- /footer -->
 </div><!-- /details page -->
-
-<!-- Start of first page: #oralhome -->
-<div data-role="page" id="oralhome">
-
-	<div data-role="header" class="frontpage">
-		<h1>&nbsp;<img src="img/nt-flower.png" alt="NT Antimicrobials Guideline" width="16px" height="16px">&nbsp;NT Antimicrobials Guideline</h1>
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#home" >Restricted Antimicrobials</a></li>
-				<li><a href="#oralhome" class="ui-btn-active">Oral Equivalents</a></li>
-			</ul>
-		</div><!-- /navbar -->
-	</div><!-- /header -->
-
-	<div data-role="content" >	
-		<ul data-role="listview" data-filter="true" id="oralequivalents"> 
-            <li data-role="list-divider">Divider..</li>
-            <li><a href="#two">Anatomy of a page</a></li> 
-        </ul>
-	</div><!-- /content -->
-	
-	<div data-role="footer" data-theme="d">
-<p>Please refer to the TEHS Guideline: Antimicrobial Switch to Oral Therapy - for detailed information on making the intravenous to oral switch
-	</div><!-- /footer -->
-</div><!-- /oralhome -->
-
-<!-- Start of details page: #orals -->
-<div data-role="page" id="orals" data-theme="a">
-
-	<div data-role="header" class="frontpage">
-		<h1><a href="#oralhome"><span class="ui-icon-arrow-l ui-btn-icon-left " style="position:relative;" /></a><img src="img/nt-flower.png" alt="NT Antimicrobials Guideline" width="16px" height="16px">&nbsp;NT Antimicrobials Guideline</h1>
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#home" >Restricted Antimicrobials</a></li>
-				<li><a href="#oralhome">Oral Equivalents</a></li>
-			</ul>
-		</div><!-- /navbar -->
-	</div><!-- /header -->
-
-	<div data-role="content" data-theme="a">	
-		<h2 id="oHeader">Drug</h2>
-		<h3>Oral equivalent</h3>
-		<p id="equivalent"></p>
-	</div><!-- /content -->
-	
-	<div data-role="footer">
-		<h4><a href="#oralhome" data-direction="reverse" data-role="button" data-theme="b"><img src="img/ntrag-white.png" alt="NT Antimicrobials Guideline" width="16px" height="16px">&nbsp;Home</a></h4><p align="center">Please refer to the TEHS Guideline: Antimicrobial Switch to Oral Therapy - for detailed information on making the intravenous to oral switch</p>
-	</div><!-- /footer -->
-</div><!-- /orals page -->
 
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/jquery.mobile-1.4.2.min.js"></script>
 <script>
 $( document ).ready(function() {
-	
-	// set up oral equivalents home page (#oralhome)
-	var list='';
-	for(var i = 0; i<oraldata.length; ++i) {
-    	list += '<li><a href="#orals" class="oralItem" id="0'+i+'">'+oraldata[i][0]+'</a></li>';
-    }
-	//console.log(list);
-    $('#oralequivalents').html(list).listview().listview("refresh");
-	
-	// set up oral equivalents details page
-	$('body').on('tap', 'a.oralItem', function() {
-	    //console.log( 'tapped '+$(this).attr('id') );
-	    $('#oHeader').html(oraldata[parseInt($(this).attr('id'))][0]);
-	    $('#equivalent').html(oraldata[parseInt($(this).attr('id'))][1]);
-	    
-	});
-	
-	// set up antimicrobials home page (#home)
 	var list='';
     for(var i = 0; i<data.length; ++i) {
     	list += '<li><a href="#details" class="amItem" id="'+i+'">'+data[i][0]+' <span class="'+data[i][1]+'">'+data[i][1]+'</span>'+'</a></li>';
     }
-	//console.log(list);
-    $('#antimicrobials').html(list).listview().listview("refresh");
-	
-	// set up antimicrobial details page (#details)
+    $('#antimicrobials').html(list).listview("refresh");
     $('body').on('tap', 'a.amItem', function() {
 	    //console.log( 'tapped '+$(this).attr('id') );
 	    $('#dHeader').html(data[$(this).attr('id')][0]);
@@ -283,20 +198,6 @@ var data = [["Aciclovir injection","A","",""],
 ["Vancomycin, injection","A","RDH IFD: Management of Febrile Neutropenia <br>RDH IFD: Initial Management of Severe Sepsis In Adults<br>RDH IFD: Management Of Staphylococcus Aureus Bacteraemia In Haemodialysis Patients<br>RDH IFD: Management Of Staphylococcus aureus Bacteraemia","Stat doses of vancomycin are using during peritoneal dialysis catheter insertion (refer to renal unit protocols). <br><br>Refer to NTDTC: Vancomycin Guideline for Adults and Children for dosing and monitoring guidelines."],
 ["Vancomycin, oral","B","","Alternative treatment of Clostridium difficile infection. Non-formulary - order on request. May take up to 72 hours for supply - contact pharmacy for advice."],
 ["Voriconazole injection, tablets and suspension.","C","","Suspension ordered on request - may take several days for supply. Contact pharmacy for advice."]];
-
-var oraldata = [["Ampicillin 1-2g IV Q6H","Amoxycillin 500mg–1g oral Q8H"],
-	["Azithromycin 500mg IV Daily","Azithromycin 500mg Oral Daily<br>or<br>Roxithromycin 300mg Oral Daily"],
-	["Benzyl penicillin 1.2g IV Q6H","Amoxycillin 500mg-1 gm oral Q8H"],
-	["Ceftriaxone 1-2g IV Daily","For COAD exacerbation - Amoxycillin 500mg oral Q8H<br>or<br>For Community Acquired Pneumonia -  Amoxycillin 1 gm oral Q8H<br><b>or</b><br>For Hospital Acquired & Aspiration Pneumonia, Abdominal Sepsis and UTI - Amoxycillin/Clavulanic Acid 875mg/125mg oral Q12H <br><br><b> There is no direct oral alternative to ceftriaxone. Check microbiology, site of infection and renal function to guide choice of agent</b><br><br><b>Ensure patient does not have a penicillin allergy before changing to amoxycillin</b>"],
-	["Cephazolin 1-2g IV Q8H","Cephalexin 500mg oral Q6H"],
-	["Ciprofloxacin 200-400mg IV Q12H","Ciprofloxacin 500-750mg oral Q12H"],
-	["Flucloxacillin 1g IV Q6H","Dicloxacillin 500mg oral Q6H"],
-	["Fluconazole 200-400mg IV Daily","Fluconazole 200mg-400mg oral Daily"],
-	["Lincomycin 600-900mg IV Q8H","Clindamycin 300-600mg oral Q8H"],
-	["Metronidazole 500mg IV Q12H","Metronidazole 400mg oral Q8H – Q12H"],
-	["Piperacillin / Tazobactam 4.5g IV Q8H","Amoxycillin/Clavulanic acid 875mg/125mg oral Q12H<br><b>NB/ there is no direct oral alternative to piperacillin/tazobactam. Check microbiology, renal function and site of infection to guide choice of agent</b><br>"]
- 
-];
 </script>
 
 </body>

@@ -1,0 +1,32 @@
+body {font-size:15px;color: #212121;background-color: #fff !important;padding: 0px;margin: 0 auto;}
+div[data-role="page"]{display: none;}
+div[data-role="page"]:first-of-type{display:block;}
+
+.frontpage {background-color: #3F51B5 !important;border:0px;}
+.frontpage img{display: inline-block;margin:0px 10px;vertical-align: middle;width: 31px;}
+.frontpage h1{vertical-align: middle;display:inline-block;margin: 0px;color: white;text-shadow: none;font-size:16px;font-weight: bold;padding:15px 10px; width: -moz-calc(100% - 51px);width: -webkit-calc(100% - 51px);width: calc(100%-51px);}
+
+.secondpage{background-color: #919cd9 !important;border:0px;}
+.secondpage img{display: inline-block;margin:0px 10px;vertical-align: middle;width: 31px;}
+.secondpage h1{vertical-align: middle;display: inline-block;margin: 0px;color: white;text-shadow: none;font-size:16px;font-weight: bold;padding:15px 10px; width: -moz-calc(100% - 51px);width: -webkit-calc(100% - 51px);width: calc(100%-51px);}
+
+.footer{margin: 0 auto;text-align: center;padding: 20px 0px;}
+
+.listview{border-radius:10px;border: 1px solid #ddd;margin:20px 0px 20px 0px;list-style: none;padding: 0px;}
+.listview li{list-style: none;padding:15px 10px;background: #F5F5F5;border-bottom: 1px solid #E0E0E0;}
+.listview li:first-of-type{border-radius: 10px 10px 0px 0px;}
+.listview li:last-of-type{border-radius:0px 0px 10px 10px;border-bottom: 0px;}
+.listview li:hover{background: #FAFAFA;}
+.listview li:after{content:"\e258";font-family: 'Glyphicons Halflings';float: right;color: #3F51B5;font-size: 16px;font-weight: 700;vertical-align: middle;}
+.listview li a{outline: none;display: inline-block;color:#000;font-size: 16px;font-weight: 700;text-decoration: none; width: -moz-calc(100% - 51px);width: -webkit-calc(100% - 51px);width: calc(100%-51px);}
+
+h3.color-primary,h3 span.color-primary{font-size:20px;}
+
+@media (max-width: 768px) 
+{
+    .frontpage h1,.secondpage h1 {font-size:15px;}
+    .listview li a{font-size: 15px;}
+    h3.color-primary,h3 span.color-primary{font-size: 17px;text-align: justify;}
+    h4.color-primary,h4 span.color-primary{font-size: 16px;text-align: justify;}
+}
+

@@ -1,15 +1,18 @@
 CACHE MANIFEST
 
-# 2014-05-29 rev 2
-# 2014-07-18 rev 3
+# 2016-05-11 rev 2
 
 CACHE:
-http://learnonline.cc/NTrag/index.html
-http://learnonline.cc/NTrag/css/jquery.mobile-1.4.2.min.css
-http://learnonline.cc/NTrag/img/ntrag.png
-http://learnonline.cc/NTrag/img/ntrag-white.png
-http://learnonline.cc/NTrag/img/nt-flower.png
-http://learnonline.cc/NTrag/js/jquery-1.11.1.min.js
-http://learnonline.cc/NTrag/js/jquery.mobile-1.4.2.min.js
-http://learnonline.cc/NTrag/css/images/icons-18-white.png
-http://learnonline.cc/NTrag/css/images/ajax-loader.png
+http://learnonline.cc/TEAMS/index.html
+http://learnonline.cc/TEAMS/css/jquery.mobile-1.4.2.min.css
+http://learnonline.cc/TEAMS/img/ntrag.png
+http://learnonline.cc/TEAMS/img/ntrag-white.png
+http://learnonline.cc/TEAMS/img/nt-flower.png
+http://learnonline.cc/TEAMS/css/bootstrap.min.css"/>
+http://learnonline.cc/TEAMS/bootstrap/css/bootstrap-theme.min.css"/>
+http://learnonline.cc/TEAMS/bootstrap/css/basic.css" />
+http://learnonline.cc/TEAMS/bootstrap/css/style.css" />
+http://learnonline.cc/TEAMS/bootstrap/js/jquery-1.11.1.min.js"></script>
+http://learnonline.cc/TEAMS/js/jquery.mobile-1.4.2.min.js
+http://learnonline.cc/TEAMS/css/images/icons-18-white.png
+http://learnonline.cc/TEAMS/css/images/ajax-loader.png
